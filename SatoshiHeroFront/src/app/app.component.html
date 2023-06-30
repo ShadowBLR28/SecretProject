@@ -1,2 +1,11 @@
-<link rel="stylesheet" href="/SatoshiHeroClone/src/styles.css">
+<link rel="stylesheet" href="/SatoshiHeroClone/src/styles.css" />
+<app-dropdown
+  [Items]="[
+    'BTC:00000000002',
+    'EF:2222222222',
+    'RUB:222222',
+    'BLR:22222222222'
+  ]"
+  [SelectedItem]="'BTC:00000000002'"
+></app-dropdown>
 <app-sidebar></app-sidebar>
