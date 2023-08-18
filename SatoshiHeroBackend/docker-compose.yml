@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  satoshihero:
+    container_name: satoshi-api
+    ports:
+      - "5220:80"
+    depends_on:
+      - "mssql-db"
+    build: ./SatoshiHero
+
+  mssql-db:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: mssql-db
+    ports:
+      - "1433:1433"
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=Adminxyz22
