@@ -2,12 +2,10 @@ version: '3.4'
 
 services:
   satoshihero:
+    build: ./SatoshiHero
     container_name: satoshi-api
     ports:
       - "5220:80"
-    depends_on:
-      - "mssql-db"
-    build: ./SatoshiHero
 
   mssql-db:
     image: mcr.microsoft.com/mssql/server:2019-latest
